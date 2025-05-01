@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'myflix.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': config(''),
+        'NAME': config(''),
+        'USER': config(''),
+        'PASSWORD': config(''),
+        'HOST': config(''),
+        'PORT': config(''),
     }
 }
 
